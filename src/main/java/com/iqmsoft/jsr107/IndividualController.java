@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 
 @Controller
-public class PersonController
+public class IndividualController
 {
-    @Autowired PersonService personService;
+    @Autowired IndividualService personService;
 
     @RequestMapping("/person/{ssn}")
     public @ResponseBody String getPerson(@PathVariable("ssn") int ssn)

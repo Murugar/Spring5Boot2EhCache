@@ -3,13 +3,13 @@ package com.iqmsoft.jsr107;
 import java.io.Serializable;
 
 
-public class Person implements Serializable
+public class Individual implements Serializable
 {
     private final int ssn;
     private final String firstName;
     private final String lastName;
 
-    public Person(int ssn, String firstName, String lastName)
+    public Individual(int ssn, String firstName, String lastName)
     {
       this.ssn = ssn;
       this.firstName = firstName;

@@ -16,23 +16,23 @@ import org.springframework.stereotype.Component;
 
 @Component
 @CacheDefaults(cacheName = "peopleCache")
-public class PersonService
+public class IndividualService
 {
-    private static final Logger LOGGER = LoggerFactory.getLogger(PersonService.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(IndividualService.class);
 
     @CacheResult
-    public Person getPerson(int ssn)
+    public Individual getPerson(int ssn)
     {
         LOGGER.info("ssn " + ssn + " not found in cache. TimeStamp: {}", new Date());
 
         switch (ssn)
         {
             case 123456789:
-                return new Person(ssn, "Geoff", "Gibson");
+                return new Individual(ssn, "Geoff", "Gibson");
             case 987654321:
-                return new Person(ssn, "Cory", "Beck");
+                return new Individual(ssn, "Cory", "Beck");
             default:
-                return new Person(ssn,"John","Doe");
+                return new Individual(ssn,"John","Doe");
         }
     }
 
